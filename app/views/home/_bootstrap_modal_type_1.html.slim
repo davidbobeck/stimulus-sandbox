@@ -1,0 +1,16 @@
+/ div.modal data-bootstrap-modal-demo-target="modal" data-controller="bootstrap-modal"
+
+/ no longer tightly coupled to parent (demo) controller
+div.modal data-controller="bootstrap-modal"
+  div.modal-dialog
+    div.modal-content
+      div.modal-header
+        h5.modal-title data-bootstrap-modal-target="title" = "Modal type #1 title"
+        button.close type="button" aria-label="Close" data-action="click->bootstrap-modal#close"
+          span aria-hidden="true" &times;
+      div class="modal-body"
+        = "Modal body type #1 text goes here. Includes a save button."
+      div.modal-footer
+        button type="button" class="btn btn-secondary" aria-label="Close" data-action="click->bootstrap-modal#close" = "Close"
+        / button type="button" class="btn btn-primary" data-action="click->bootstrap-modal-demo#save" = "Save"
+        button.modal-save-button.type1 type="button" class="btn btn-primary" id="modal-save-button" = "Save"

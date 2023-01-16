@@ -1,0 +1,24 @@
+css:
+  .modal-wrapper {
+    display: inline-block;
+  }
+  .btn {
+    margin: 5px;
+  }
+
+div.container
+  h1 Stimulus Example of Bootstrap Modal
+
+  div.modal-wrapper data-controller="bootstrap-modal-demo"
+    button.btn.btn-primary{ data-action="click->bootstrap-modal-demo#launchDemo"
+                            data-bootstrap-modal-demo-title-param="Modal title from param" }
+      = "Show Modal Type #1"
+
+    = render partial: "bootstrap_modal_type_1"
+
+  div.modal-wrapper data-controller="bootstrap-modal-demo"
+    button.btn.btn-primary{ data-action="click->bootstrap-modal-demo#launchDemo"
+                            data-bootstrap-modal-demo-title-param="Modal title from param" }
+      = "Show Modal Type #2"
+
+    = render partial: "bootstrap_modal_type_2"

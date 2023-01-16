@@ -1,0 +1,16 @@
+h1 Example of Stimulus Popover
+
+div data-controller="popover" data-popover-url-value="#{stimulus_popover_content_path}"
+  a href="#" data-action="mouseenter->popover#show mouseleave->popover#hide"
+    = "hover over me for ajax content"
+
+br
+br
+br
+
+div data-controller="popover"
+  a href="#" data-action="mouseleave->popover#hide mouseenter->popover#show"
+    = "hover over me for template content"
+  template data-popover-target="content"
+    div data-popover-target="card"
+      p = "This is content defined in a hidden template"

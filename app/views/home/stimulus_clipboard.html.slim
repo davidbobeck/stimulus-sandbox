@@ -1,0 +1,10 @@
+h1 Example of Stimulus Clipboard
+
+div data-controller="clipboard" data-clipboard-success-content="Whoot!"
+
+  textarea data-clipboard-target="source"
+
+  button data-action="click->clipboard#copy" data-clipboard-target="button" Copy
+
+  p = "Paste into here ..."
+  textarea

@@ -1,0 +1,40 @@
+css:
+  .play--bold {
+    font-weight: bold;
+    color: purple;
+  }
+
+  .play--size20 {
+    font-size: 20px;
+  }
+
+h1 Home#index
+p Find me in app/views/home/index.html.slim
+
+div data-controller="play" data-action="keydown.ctrl+space->play#keyPress" data-play-color-by-value="true" data-play-color-value="green" data-play-background-value="lightgreen" data-play-wow-class="play--bold play--size20"
+  div data-play-target="redBox" data-action="click->play#fillRed" data-play-color-param="red" data-play-background-param="yellow"
+  br
+  br
+  span This input box traps 'ctrl+space'
+  ''
+  input
+  div data-play-target="bucket"
+
+
+h2 Stimulus Component Examples
+ul
+  li = link_to "Animated Number", stimulus_animated_number_path
+  li = link_to "Character Counter", stimulus_character_counter_path
+  li = link_to "Chart", stimulus_chart_path
+  li = link_to "Clipboard", stimulus_clipboard_path
+  li = link_to "Color Picker", stimulus_color_picker_path
+  li = link_to "Content Loader", stimulus_content_loader_path
+  li = link_to "Dropdown", stimulus_dropdown_path
+  li = link_to "Lightbox", stimulus_lightbox_path
+  li = link_to "Password Visibility", stimulus_password_visibility_path
+  li = link_to "Popover", stimulus_popover_path
+  li = link_to "Scroll To", stimulus_scroll_to_path
+
+h2 Custom Component Examples
+ul
+  li = link_to "Bootstrap Modal", bootstrap_modal_demo_path
